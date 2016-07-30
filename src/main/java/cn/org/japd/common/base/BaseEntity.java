@@ -114,18 +114,18 @@ public abstract class BaseEntity implements Persistable<String> {
 		return JSON.toJSONString(this);
 	}
 
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (obj == null) {
-//			return false;
-//		}
-//		if (this == obj) {
-//			return true;
-//		}
-//		if (!getClass().equals(obj.getClass())) {
-//			return false;
-//		}
-//		BaseEntity rhs = (BaseEntity) obj;
-//		return this.id == null ? false : this.id.equals(rhs.id);
-//	}
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (this == obj) {
+			return true;
+		}
+		if (!getClass().equals(obj.getClass())) {
+			return false;
+		}
+		BaseEntity rhs = (BaseEntity) obj;
+		return this.id == null ? false : this.id.equals(rhs.id);
+	}
 }
